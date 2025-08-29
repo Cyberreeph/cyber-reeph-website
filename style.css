@@ -1,0 +1,297 @@
+/* General Dark Theme */
+body {
+  margin: 0;
+  font-family: 'Consolas', monospace;
+  background: #0a0a0f;
+  color: #f0f0f0;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10,10,20,0.95);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #00fff7;
+}
+
+/* Glow Effect */
+.glow {
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 40px #00fff7;
+}
+
+/* Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769') no-repeat center/cover;
+  text-align: center;
+  padding: 180px 20px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.neon-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: none;
+  border: 2px solid #00fff7;
+  color: #00fff7;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+.neon-btn:hover {
+  background: #00fff7;
+  color: black;
+  box-shadow: 0 0 20px #00fff7;
+}
+
+/* Sections */
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.service-box {
+  background: #111;
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+  border: 1px solid #222;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00fff7;
+}
+
+.icon {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #00fff7;
+}
+
+/* Testimonials */
+.testimonial {
+  background: #111;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-left: 5px solid #00fff7;
+  border-radius: 6px;
+  font-style: italic;
+}
+
+/* CTA */
+.cta {
+  background: #111;
+  color: #00fff7;
+  padding: 60px 20px;
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border: 1px solid #333;
+  background: #0a0a0f;
+  color: #f0f0f0;
+  border-radius: 6px;
+}
+
+form button {
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background: #0a0a0f;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+}
+
+/* Scroll Animations */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-out;
+}
+[data-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Pricing */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.price-box {
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+
+.price-box:hover, .price-box.highlight {
+  box-shadow: 0 0 20px #00fff7;
+  transform: translateY(-5px);
+}
+
+.price-box h4 {
+  color: #00fff7;
+  font-size: 1.5em;
+}
+
+/* FAQ */
+.faq-box {
+  background: #111;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 700px;
+  border-radius: 6px;
+  text-align: left;
+  border-left: 3px solid #00fff7;
+}
+
+
+
+/* Booking Form Section */
+#booking {
+  padding: 60px 20px;
+  background: #0d0d0d;
+  text-align: center;
+}
+
+#booking h2 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7;
+}
+
+/* Form Container */
+#booking form {
+  max-width: 600px;
+  margin: auto;
+  background: #111;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #222;
+  box-shadow: 0 0 15px rgba(0,255,247,0.1);
+  animation: fadeUp 1s ease;
+}
+
+/* Labels */
+#booking label {
+  display: block;
+  text-align: left;
+  color: #aaa;
+  font-size: 0.9em;
+  margin: 12px 0 5px;
+}
+
+/* Inputs & Textarea */
+#booking input,
+#booking select,
+#booking textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 1em;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Neon Focus Effect */
+#booking input:focus,
+#booking select:focus,
+#booking textarea:focus {
+  box-shadow: 0 0 8px #00fff7, 0 0 15px #00fff7;
+  border: 1px solid #00fff7;
+}
+
+/* Submit Button */
+#booking button {
+  background: transparent;
+  border: 2px solid #00fff7;
+  color: #00fff7;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+#booking button:hover {
+  background: #00fff7;
+  color: #111;
+  box-shadow: 0 0 15px #00fff7;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+
